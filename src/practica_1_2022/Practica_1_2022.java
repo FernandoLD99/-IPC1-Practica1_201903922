@@ -305,16 +305,19 @@ public class Practica_1_2022 {
                     punteoGlobal = 0;
                     movimientos = 0;
                     menu();
+                    
                  }else{ 
-                
+                //juegoTerminado();
                 movimiento(opcion);
                 System.out.println("Jugador: "+ nombreJugador +"  Punteo:" + punteoGlobal + "  Movimientos: " + movimientos);
                 imprimir(play);  
                 juegoTerminado();
                 opcion =nc.next();
+                //juegoTerminado();
                  
                  }
              }else{
+             
              System.out.println("Comando no valido");
              System.out.println("Jugador: "+ nombreJugador +"  Punteo:" + punteoGlobal + "  Movimientos: " + movimientos);
              imprimir(play);
@@ -475,7 +478,7 @@ public class Practica_1_2022 {
     
     
     public static void juegoTerminado(){
-        if (punteoGlobal == puntajeMax) {
+        if (punteoGlobal >= puntajeMax) {
             System.out.println("");
              System.out.println("");
               System.out.println("");
@@ -488,6 +491,7 @@ public class Practica_1_2022 {
                     punteoGlobal = 0;
                     movimientos = 0;
                     menu();
+              System.out.println("");
         }else if(contadorComida(tab) == 0 ){
              System.out.println("");
              System.out.println("");
@@ -501,6 +505,9 @@ public class Practica_1_2022 {
                     punteoGlobal = 0;
                     movimientos = 0;
                     menu();
+                    
+             System.out.println("");
+             
         }else if (punteoGlobal < 0) {
             System.out.println("");
              System.out.println("");
@@ -514,6 +521,7 @@ public class Practica_1_2022 {
                     punteoGlobal = 0;
                     movimientos = 0;
                     menu();
+                    System.out.println("");
 
             
         }
